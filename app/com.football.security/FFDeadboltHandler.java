@@ -1,4 +1,4 @@
-package com.ff.security;
+package com.football.security;
 
 import be.objectify.deadbolt.core.models.Subject;
 import be.objectify.deadbolt.java.DeadboltHandler;
@@ -7,7 +7,7 @@ import play.libs.F;
 import play.mvc.Http;
 import play.mvc.SimpleResult;
 
-import static play.mvc.Results.forbidden;
+import static play.mvc.Results.redirect;
 
 public class FFDeadboltHandler implements DeadboltHandler {
 
@@ -26,9 +26,7 @@ public class FFDeadboltHandler implements DeadboltHandler {
         return F.Promise.promise(new F.Function0<SimpleResult>() {
             @Override
             public SimpleResult apply()  {
-                return forbidden(
-                        "{\"message\":\"authentication failure\"}"
-                );
+                return redirect("/login");
             }
         });
     }

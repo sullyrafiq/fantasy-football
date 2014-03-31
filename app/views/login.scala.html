@@ -1,0 +1,27 @@
+@(loginForm: Form[Login])
+
+@import helper._
+
+@main("Fantasy Football") {
+
+    <div class="container">
+
+        @form(action = routes.Authentication.authenticate()) {
+            <div class="login">
+                <div class="input-group">
+                    <input id="email" type="email" name="email" placeholder="Email" />
+                </div>
+
+                <div class="input-group">
+                    <input id="password" type="password" name="password" placeholder="Password" />
+                </div>
+
+                <div class="input-group overflow">
+                    <button>Login</button>
+                </div>
+            </div>
+        }
+
+    </div>
+
+}

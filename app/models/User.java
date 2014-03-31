@@ -20,41 +20,11 @@ import java.util.List;
  */
 public class User implements Subject {
 
-    @Constraints.Required
-    @Constraints.MaxLength(value = 255)
-    @Constraints.Email
-    private String username;
+    public String email;
+    public String password;
+    public String role;
 
-    @NotEmpty
-    @Constraints.Required
-    @Constraints.MinLength(value = 7)
-    private String password;
 
-    private String role;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
 
     @Override
     @JsonIgnore
@@ -76,6 +46,28 @@ public class User implements Subject {
     @Override
     @JsonIgnore
     public String getIdentifier() {
-        return getUsername();
+        return email;
+    }
+
+    public static User authenticate(String email, String password) {
+
+        if (email.equals("sullyrafiq@gmail.com") && password.equals("password")) {
+
+            // TODO this should come from the DB
+            User user = getMockUser();
+
+            return user;
+        }
+
+        return null;
+    }
+
+    @JsonIgnore
+    public static User getMockUser() {
+        User user = new User();
+        user.email = "sullyrafiq@gmail.com";
+        user.password = "password";
+        user.role = "admin";
+        return user;
     }
 }

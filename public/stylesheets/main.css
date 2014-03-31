@@ -1,0 +1,87 @@
+body {
+	font-family: 'Roboto Slab', serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: green;
+	color: white;
+	padding: 20px 30px 30px 30px; 
+}
+
+.container {
+	background-color: white;
+	height: 600px;
+	padding: 50px 30px 70px 30px;
+}
+
+.fixtures {
+	border: 1px solid #eee;
+	width: 60%;
+}
+
+.round {
+	border-bottom: 1px solid #eee;
+}
+
+.round h4 a {
+	color: black;
+	padding-left: 30px;
+	text-decoration: none;
+}
+
+.round h4 a:hover {
+	color: blue;
+}
+
+.fixture-list {
+	display: none;
+	padding-left: 30px;
+}
+
+.login {
+    border: 1px solid #eee;
+    padding: 30px 30px 30px 30px;
+    width: 40%;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group input {
+    width: 95%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.input-group button {
+    color: white;
+    float: right;
+    background: #007CC2;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    display: block;
+    padding: 12px;
+    text-align: center;
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    border: none;
+}

@@ -1,4 +1,4 @@
-package com.ff.security;
+package com.football.security;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -40,7 +40,7 @@ public class SecurityUtil {
         try {
             session.put(SESSION_USER, getObjectMapper().writeValueAsString(user));
         } catch (JsonProcessingException e) {
-            throw new IllegalStateException("Unexpected exception writing user " + user.getUsername(), e);
+            throw new IllegalStateException("Unexpected exception writing user " + user.email, e);
         }
     }
 
