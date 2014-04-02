@@ -49,6 +49,7 @@ public class User implements Subject {
         return email;
     }
 
+    @JsonIgnore
     public static User authenticate(String email, String password) {
 
         if (email.equals("sullyrafiq@gmail.com") && password.equals("password")) {
